@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <!-- Encabezado -->
+        <tr>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Ciudad</th>
+            <th>Edad</th>
+            <th>Profesion</th>
+        </tr>
+        <!-- Datos -->
+        <tr>
+            <td>Mario Sanchez</td>
+            <td>mario@correo.com</td>
+            <td>Manizales</td>
+            <td>31</td>
+            <td>Ingeniero de Sistemas</td>
+        </tr>
+        <tr>
+            <td>Juan Perez</td>
+            <td>juan@correo.com</td>
+            <td>Bogota</td>
+            <td>28</td>
+            <td>Tecnologo en recursos humanos</td>
+        </tr>
+        <tr>
+            <td>Lorena Rodriguez</td>
+            <td>lorena@correo.com</td>
+            <td>Cali</td>
+            <td>35</td>
+            <td>Esteticista</td>
+        </tr>
+        <tr>
+            <td>Marcela Morales</td>
+            <td>marcela@correo.com</td>
+            <td>Medellin</td>
+            <td>23</td>
+            <td>Ingeniera Electrica</td>
+        </tr>
+    </table>
+    <hr>
+    <!-- Formulario -->
+    <form>
+        <!-- Campo de texto -->
+        <label for="">Nombre</label>
+        <input type="text" placeholder="Nombre" required> 
+        <!-- Salto de linea -->
+        <br>
+        <!-- Campo Fecha -->
+        <label for="">Fecha de nacimiento</label>
+        <input type="date" required max="2024-05-02" 
+                min="1900-01-01" value="2024-05-02">
+        <br>
+        <!-- Campo Numerico -->
+        <label for="">Ingresos mensuales</label>
+        <input type="number" required placeholder="Salario mensual">
+        <br>
+        <!-- Campo Email -->
+        <label for="">Correo electronico</label>
+        <input type="email" required placeholder="Ingresar Email"> <br>
+        <!-- Campo Archivo -->
+        <label for="">Subir CV</label>
+        <input type="file" required placeholder="Subir Archivo"> <br>
+        <!-- Campo password -->
+        <label for="">Password</label>
+        <input type="password" required> <br>
+        <!-- Campo Hora -->
+        <label for="">Hora de ingreso</label>
+        <input type="time" required> <br>
+        <!-- Campo Mes -->
+        <label for="">Mes de ingreso a la empresa</label>
+        <input type="month" required> <br>
+        <!-- Campo Color -->
+        <label for="">Color del uniforme</label>
+        <input type="color" required> <br>
+        <!-- Campo Radio -->
+        <label for="">Genero</label>
+        <input type="radio" name="genero" value="femenino" required>
+        <label for="">Femenino</label>
+        <input type="radio" name="genero" value="masculino" required>
+        <label for="">Masculino</label> <br>
+        <!-- Campo Checkbox -->
+        <label for="">Dias Laborados</label>
+        <input type="checkbox" name="dias" required value="Lunes">
+        <label for="">Lunes</label>
+        <input type="checkbox" name="dias" required value="Martes">
+        <label for="">Martes</label>
+        <input type="checkbox" name="dias" required value="Miercoles">
+        <label for="">Miercoles</label>
+        <input type="checkbox" name="dias" required value="Jueves">
+        <label for="">Jueves</label>
+        <input type="checkbox" name="dias" required value="Viernes">
+        <label for="">Viernes</label> <br>
+        <!-- Campo URL -->
+        <label for="">Link Perfil Linkedin</label>
+        <input type="url" required> <br>
+        <!-- Campo Telefono -->
+        <label for="">Telefono</label>
+        <input type="tel" required> <br>
+        <!-- Selector -->
+        <label for="">Escoja una ciudad</label>
+        <select name="" id="">
+            <option value="">-</option>
+            <option value="Manizales">Manizales</option>
+            <option value="Bogota">Bogota</option>
+            <option value="Cali">Cali</option>
+        </select> <br>
+        <!-- Button -->
+        <button>Enviar</button>
+    </form>
+</body>
+</html>
