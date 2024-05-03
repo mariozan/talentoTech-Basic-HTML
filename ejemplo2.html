@@ -14,6 +14,7 @@
             <th>Ciudad</th>
             <th>Edad</th>
             <th>Profesion</th>
+            <th>Fecha de nacimiento</th>
         </tr>
         <!-- Datos -->
         <tr>
@@ -22,6 +23,7 @@
             <td>Manizales</td>
             <td>31</td>
             <td>Ingeniero de Sistemas</td>
+            <td>04-10-1992</td>
         </tr>
         <tr>
             <td>Juan Perez</td>
@@ -50,13 +52,12 @@
     <form>
         <!-- Campo de texto -->
         <label for="">Nombre</label>
-        <input type="text" placeholder="Nombre" required> 
+        <input type="text" placeholder="Escriba el nombre" required> 
         <!-- Salto de linea -->
         <br>
         <!-- Campo Fecha -->
         <label for="">Fecha de nacimiento</label>
-        <input type="date" required max="2024-05-02" 
-                min="1900-01-01" value="2024-05-02">
+        <input type="date" required max="2024-05-02" min="1900-01-01" value="2024-05-02">
         <br>
         <!-- Campo Numerico -->
         <label for="">Ingresos mensuales</label>
@@ -67,7 +68,7 @@
         <input type="email" required placeholder="Ingresar Email"> <br>
         <!-- Campo Archivo -->
         <label for="">Subir CV</label>
-        <input type="file" required placeholder="Subir Archivo"> <br>
+        <input type="file" required placeholder="Subir Archivo" accept="image/*"> <br>
         <!-- Campo password -->
         <label for="">Password</label>
         <input type="password" required> <br>
@@ -82,21 +83,21 @@
         <input type="color" required> <br>
         <!-- Campo Radio -->
         <label for="">Genero</label>
-        <input type="radio" name="genero" value="femenino" required>
+        <input type="radio" name="genero" value="F" required>
         <label for="">Femenino</label>
-        <input type="radio" name="genero" value="masculino" required>
+        <input type="radio" name="genero" value="M" required>
         <label for="">Masculino</label> <br>
         <!-- Campo Checkbox -->
         <label for="">Dias Laborados</label>
-        <input type="checkbox" name="dias" required value="Lunes">
+        <input type="checkbox" name="dias" value="1">
         <label for="">Lunes</label>
-        <input type="checkbox" name="dias" required value="Martes">
+        <input type="checkbox" name="dias" value="2">
         <label for="">Martes</label>
-        <input type="checkbox" name="dias" required value="Miercoles">
+        <input type="checkbox" name="dias" value="3">
         <label for="">Miercoles</label>
-        <input type="checkbox" name="dias" required value="Jueves">
+        <input type="checkbox" name="dias" value="4">
         <label for="">Jueves</label>
-        <input type="checkbox" name="dias" required value="Viernes">
+        <input type="checkbox" name="dias" value="5">
         <label for="">Viernes</label> <br>
         <!-- Campo URL -->
         <label for="">Link Perfil Linkedin</label>
@@ -106,12 +107,30 @@
         <input type="tel" required> <br>
         <!-- Selector -->
         <label for="">Escoja una ciudad</label>
-        <select name="" id="">
+        <select name="" id="" required>
             <option value="">-</option>
             <option value="Manizales">Manizales</option>
             <option value="Bogota">Bogota</option>
             <option value="Cali">Cali</option>
         </select> <br>
+        <!-- Fieldset -->
+        <fieldset>
+            <legend>Informacion General</legend>
+            <!-- Text Area -->
+            <label for="">Descripcion del Perfil</label>
+            <textarea name="" id=""></textarea> <br>
+            <label for="">Tipo documento</label>
+            <input list="documento" name="documento">
+            <!-- Datalist -->
+            <datalist id="documento">
+                <option value="Cedula">Cedula</option>
+                <option value="Tarjeta de Identidad">Tarjeta de Identidad</option>
+                <option value="Pasaporte">Pasaporte</option>
+            </datalist> <br>
+            <label for="">Cedula</label>
+            <input type="text">
+        </fieldset>
+        
         <!-- Button -->
         <button>Enviar</button>
     </form>
