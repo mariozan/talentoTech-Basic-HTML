@@ -6,10 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <table>
+    <table style="background-color: aquamarine;">
         <!-- Encabezado -->
-        <tr>
-            <th>Nombre</th>
+        <tr style="background-color: blueviolet;">
+            <th style="background-color: brown; color: white;">Nombre</th>
             <th>Correo</th>
             <th>Ciudad</th>
             <th>Edad</th>
@@ -18,7 +18,7 @@
         </tr>
         <!-- Datos -->
         <tr>
-            <td>Mario Sanchez</td>
+            <td style="border:1px solid black">Mario Sanchez</td>
             <td>mario@correo.com</td>
             <td>Manizales</td>
             <td>31</td>
@@ -49,38 +49,38 @@
     </table>
     <hr>
     <!-- Formulario -->
-    <form>
+    <form method="POST">
         <!-- Campo de texto -->
         <label for="">Nombre</label>
-        <input type="text" placeholder="Escriba el nombre" required> 
+        <input type="text" placeholder="Escriba el nombre" required name="nombre"> 
         <!-- Salto de linea -->
         <br>
         <!-- Campo Fecha -->
         <label for="">Fecha de nacimiento</label>
-        <input type="date" required max="2024-05-02" min="1900-01-01" value="2024-05-02">
+        <input type="date" required max="2024-05-02" min="1900-01-01" value="2024-05-02" name="fecha_nacimiento">
         <br>
         <!-- Campo Numerico -->
         <label for="">Ingresos mensuales</label>
-        <input type="number" required placeholder="Salario mensual">
+        <input type="number" required placeholder="Salario mensual" name="salario">
         <br>
         <!-- Campo Email -->
         <label for="">Correo electronico</label>
-        <input type="email" required placeholder="Ingresar Email"> <br>
+        <input type="email" required placeholder="Ingresar Email" name="email"> <br>
         <!-- Campo Archivo -->
         <label for="">Subir CV</label>
-        <input type="file" required placeholder="Subir Archivo" accept="image/*"> <br>
+        <input type="file" required placeholder="Subir Archivo" accept="image/*" name="cv"> <br>
         <!-- Campo password -->
         <label for="">Password</label>
-        <input type="password" required> <br>
+        <input type="password" required name="password"> <br>
         <!-- Campo Hora -->
         <label for="">Hora de ingreso</label>
-        <input type="time" required> <br>
+        <input type="time" required name="hora_ingreso"> <br>
         <!-- Campo Mes -->
         <label for="">Mes de ingreso a la empresa</label>
-        <input type="month" required> <br>
+        <input type="month" required name="mes_ingreso"> <br>
         <!-- Campo Color -->
         <label for="">Color del uniforme</label>
-        <input type="color" required> <br>
+        <input type="color" required name="color_uniforme"> <br>
         <!-- Campo Radio -->
         <label for="">Genero</label>
         <input type="radio" name="genero" value="F" required>
@@ -101,13 +101,13 @@
         <label for="">Viernes</label> <br>
         <!-- Campo URL -->
         <label for="">Link Perfil Linkedin</label>
-        <input type="url" required> <br>
+        <input type="url" required name="linkedin"> <br>
         <!-- Campo Telefono -->
         <label for="">Telefono</label>
-        <input type="tel" required> <br>
+        <input type="tel" required name="telefono"> <br>
         <!-- Selector -->
         <label for="">Escoja una ciudad</label>
-        <select name="" id="" required>
+        <select name="ciudad" id="" required>
             <option value="">-</option>
             <option value="Manizales">Manizales</option>
             <option value="Bogota">Bogota</option>
@@ -118,17 +118,18 @@
             <legend>Informacion General</legend>
             <!-- Text Area -->
             <label for="">Descripcion del Perfil</label>
-            <textarea name="" id=""></textarea> <br>
+            <textarea id="" cols="50" rows="5" name="descipcion"></textarea> <br>
+            <!-- Datalist -->
             <label for="">Tipo documento</label>
             <input list="documento" name="documento">
-            <!-- Datalist -->
             <datalist id="documento">
                 <option value="Cedula">Cedula</option>
                 <option value="Tarjeta de Identidad">Tarjeta de Identidad</option>
                 <option value="Pasaporte">Pasaporte</option>
             </datalist> <br>
+
             <label for="">Cedula</label>
-            <input type="text">
+            <input type="text" name="cedula">
         </fieldset>
         
         <!-- Button -->
