@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="color1 bordes">
+        Elemento 1
+    </div>
+    <div class="color2 bordes margenes padding"> 
+        Elemento 2
+    </div>
+    <div>
+        <h1 class="text-shadow">Titulo</h1>
+        <p class="alineacion-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi veritatis in amet minima aut praesentium, expedita inventore nostrum quibusdam a et. Ducimus nisi asperiores, enim maxime repudiandae praesentium esse sit.</p>
+    </div>
+</body>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+
+<style>
+    .color1 {
+        background-color: tomato;
+        color: #C5D61D;
+        border: solid;
+        border-color: rgb(9, 42, 205);
+        opacity: 0.5;
+    }
+
+    .color2{
+        /* Tamaño del elemento */
+        width: 80%;
+        height: 300px;
+        /* Imagen de fondo */
+        background-image: url("https://acis.org.co/portal/sites/default/files/mintic.jpg");
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-attachment: scroll; 
+                
+    }
+
+    .bordes {
+        /* Bordes */
+        border-style: dotted solid dashed double;
+        border-color: #15e2c0;
+        border-width: 10px;
+        border-radius: 100px;
+    }
+
+    .margenes {
+        /* Margenes */
+        margin-left: 50px;
+        margin-top: 20px; 
+        margin-bottom: 30px;
+    }
+
+    .padding {
+        padding-top: 50px;
+        padding-left: 30px;
+        padding-right: 50px;
+    }
+
+    .alineacion-texto {
+        text-align: center;
+        text-align-last: right;
+        /* direction: rtl; */
+        /* unicode-bidi: bidi-override; */
+        text-decoration-line: underline;
+        text-decoration-color: red;
+        text-decoration-style: dotted;
+        text-decoration-thickness: 5px;
+        
+        text-transform: capitalize;
+        text-indent: 100px;
+        letter-spacing: 2px;
+        line-height: 2;
+        word-spacing: 10px;
+
+        font-weight: bold;
+    }
+
+    .text-shadow {
+        color: tomato;
+        text-shadow: 2px 2px 5px #e215b6;
+        font-family: 'Audiowide', sans-serif;
+        font-style: oblique;
+        font-size: 60px;        
+    }
+</style>
+</html>
