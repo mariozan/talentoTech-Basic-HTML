@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="color1 bordes">
+        <i class="fa-brands fa-facebook"></i>
         Elemento 1
     </div>
     <div class="color2 bordes margenes padding"> 
@@ -55,6 +56,40 @@
                 <td>luis@correo.com</td>
             </tr>
         </table>
+    </div>
+
+    <div>
+        <h1>Posicionamiento</h1>
+        <div class="relative">
+            Relativo
+            <div class="absolute">
+                Absoluto
+                <div class="fixed">
+                    Fijado
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eius doloremque excepturi perspiciatis repellendus accusantium magnam asperiores veritatis nam ullam quam porro, veniam illo officiis possimus? Earum dolorem veniam cupiditate.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h1>Float</h1>
+        <div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos iusto debitis, maxime vero nemo, quasi, itaque soluta quod tenetur perspiciatis asperiores rem facere distinctio consectetur ratione quidem fugit saepe consequuntur.
+                <img class="float" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHf9JcVsqVK9ruBQ91PTP7y6XgEgJQ-i7PkQ&s">
+            </p>            
+        </div>
+    </div>
+
+    <div>
+        <h1>Imagenes</h1>
+        <img class="imagen1" src="https://concepto.de/wp-content/uploads/2018/08/persona-e1533759204552.jpg" alt="">
+
+        <img class="imagen2" src="https://familia.edu.mx/wp-content/uploads/2020/03/que-es-la-persona-2.jpg" alt="">
+
+        <img class="imagen3" src="https://www.mundopsicologos.com/site/article/60606/50895/las-10-cualidades-de-una-persona-mas-valoradas-0_ai1.jpg" alt="">
     </div>
 </body>
 
@@ -152,7 +187,8 @@
     ul>li {
        list-style-type: square; 
        background-color: white;
-       /* list-style-image: url('https://raw.githubusercontent.com/Marvel999/Android-Loading-Animation/master/LoadingAnimation/src/main/res/drawable/triad_ring.gif'); */
+       display: inline;
+       visibility: hidden;
     }
 
     ul {
@@ -188,6 +224,87 @@
         color: rgb(167, 240, 140);
     }
 
+    /* Se adapata a la posicion del padre */
+    .relative {
+        border: 3px solid #2260bd;
+        width: 400px;
+        height: 200px;
+        position: relative;
+    }
+
+    /* Mantiene su posicion fija */
+    .absolute {
+        border: 3px solid #e215b6;
+        width: 200px;
+        height: 100px;
+        right: 0;
+        top: 80px;
+        position: absolute;
+
+        /* Alienacion */
+        text-align: right;
+    }
+
+    .fixed {
+        border: 3px solid green;
+        width: 100px;
+        height: 50px;
+        left: 0;
+        top: 200px;
+        position: fixed;
+        background-color: #C5D61D;
+
+        /* Desbordado */
+        overflow: auto;
+    }
+
+    .float {
+        width: 100px;
+        height: 150px;
+        float: left;
+    }
+
+    /* PseudoElementos */
+    h1::first-letter {
+        color: red;
+        background-color: aquamarine;
+        font-size: 50px;
+    }
+
+    .imagen1 {
+        width: 30%;
+        border-radius: 100px;
+        border: 1px solid black;
+        padding: 10px;
+        outline-color: #e215b6;
+        outline-style: solid;
+    }
+
+    .imagen2 {
+        width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+        box-shadow: 5px 1px 20px red;
+    }
+
+    .imagen3 {
+        width: 60%;
+        display: block;
+        margin-top: 50px;
+
+        filter: blur(4px); /*Difuminar*/
+        filter: brightness(250%); /*Brillo*/
+        filter: contrast(180%); /*Contraste*/
+        filter: grayscale(80%); /* Escala de Grises*/
+        filter: hue-rotate(180deg); /* Escala de Grises*/
+        filter: invert(60%); /* Inversion de colores*/
+        filter: saturate(5); /* Saturacion */
+        filter: sepia(50%); /* Sepia */
+        filter: opacity(50%); /* Opacidad */
+
+    }
 
     
 </style>
