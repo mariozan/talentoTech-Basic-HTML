@@ -91,6 +91,40 @@
 
         <img class="imagen3" src="https://www.mundopsicologos.com/site/article/60606/50895/las-10-cualidades-de-una-persona-mas-valoradas-0_ai1.jpg" alt="">
     </div>
+
+    <div class="transition">
+        <h1>Transiciones</h1>
+    </div>
+
+    <div class="animation">
+        <h1>Animaciones</h1>
+    </div>
+
+    <form action="">
+        <label for="">Nombre</label>
+        <input type="text" placeholder="Nombre">
+        <label for="">Descripcion</label>
+        <textarea name="" id=""></textarea>
+        <label for="">Pais</label>
+        <select name="" id="">
+            <option value="">Colombia</option>
+            <option value="">Canada</option>
+            <option value="">Chile</option>
+        </select>
+        <button>Enviar</button>
+    </form>
+
+    <h1>Grid</h1>
+    <div class="grid">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
 </body>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
@@ -269,6 +303,7 @@
         color: red;
         background-color: aquamarine;
         font-size: 50px;
+        border-style: solid;
     }
 
     .imagen1 {
@@ -303,7 +338,106 @@
         filter: saturate(5); /* Saturacion */
         filter: sepia(50%); /* Sepia */
         filter: opacity(50%); /* Opacidad */
+    }
 
+    .imagen3:hover {
+        width: 70%;
+        transition: width 2s, height 4s;
+    }
+
+    .transition {
+        background-color: tomato;
+        width: 20%;
+        height: 100px;
+        transition: width 2s, transform 2s;
+        transition-timing-function: linear;
+        transition-timing-function: ease;
+        transition-timing-function: ease-in;
+        transition-timing-function: ease-out;
+        transition-delay: 0.5s;
+    }
+
+    .transition:hover {
+        width: 30%;
+        transform: translate(120px, 50%);
+        transform: rotate(90deg);
+    }
+
+    .animation {
+        width: 25%;
+        height: 100px;
+        background-color: red;
+        position: relative;
+        /* animation-name: ejemplo; */
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes ejemplo {
+        0% {border-radius: 5px; background-color: red; left: 0; top: 0}
+        25% {border-radius: 20px; background-color: yellow; left: 200px; top: 0}
+        50% {border-radius: 50px; background-color: blue; left: 200px; top: 200px}
+        75% {border-radius: 20px; background-color: green; left: 0; top: 200px}
+        100% {border-radius: 5px; background-color: red; left: 0; top: 0}
+    }
+    /* Estilos del Formulario */
+    input, textarea, select {
+        width: 100%;
+        padding: 10px 20px;
+        margin: 8px;
+        display: inline-block;
+        border: 1px solid #04918a;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    button {
+        border-radius: 5px;
+        color: white;
+        background-color: chocolate;
+        padding: 10px 20px;
+        width: 100%;
+        margin: 8px;
+        border: none;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: rgb(223, 143, 85);
+    }
+    label {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 5px;
+        font-weight: bold;
+    }
+
+    /* Cuadricula */
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 10px;
+        background-color: #15e2c0;
+        padding: 10px;
+    }
+
+    .grid > div {
+        background-color: antiquewhite;
+        text-align: center;
+        padding: 20px;
+        font-size: 30px;
+    }
+
+    /* MedaQueries Para diseño Responsive */
+    @media screen and (max-width: 600px) {
+        button {
+            width: 200px;
+            background-color: #e215b6;
+        }
+    }
+
+    @media screen and (min-width: 600px) {
+        button {
+            width: 50%;
+            background-color: #2260bd;
+        }
     }
 
     
