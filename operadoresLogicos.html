@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    var edad = parseInt(prompt("Ingrese su edad: "))
+    var mayorDeEdad = edad >= 18 // Logico
+    document.write("¿Es mayor de edad?:" + mayorDeEdad)
+    
+    // Implementar un algoritmo que reciba una nota e imprima 
+    // true si la nota es mayor o igual a 3, o false si es menor
+    var nota = parseFloat(prompt("Ingrese la nota: "))
+    const NOTA_APROBATORIA = 3
+    var aprobo = nota >= NOTA_APROBATORIA
+    document.write("¿El estudiante aprobó?: " + aprobo)
+
+    /** Implementar un aglritmo que imprima true si el 
+     *  numero ingresado es PAR o false si no lo es */
+    var numero = parseFloat(prompt("Ingrese el numero:"))
+    var residuo = numero%2
+    var par = residuo == 0
+    document.write("¿El numero " + numero + " es par? " + par)
+
+
+    /** Implementar un algoritmo que me permita verificar si una  
+     *  persona es apta para votar, debe ser Colombiano y mayor 
+     *  de edad */
+
+    var edad = parseInt(prompt("Ingrese la edad: "))
+    var nacionalidad = prompt("Ingrese la nacionalidad: ")
+
+    //                  true    &&              true            => true
+    //                  false   ||              false           => false
+    var puedeVotar = edad >= 18 || nacionalidad == "Colombiano"
+    document.write("¿Puede votar? " + puedeVotar)
+
+    /** Subsidio solo para NO Colombianos */
+    var nacionalidad = prompt("Ingrese su nacionalidad: ")
+    var esColombiano = nacionalidad == "Colombiano" 
+    var aptoSubsidio = !esColombiano
+    document.write("¿Puede recibir subsidio? " + aptoSubsidio)
+
+    /** Detenerminar si un numero ingresado es mayor que 1 Y 
+     * menor que 100
+    */
+   var number = parseInt(prompt("Ingresar el numero:"))
+   var mayor1menor100 = number > 1 && number < 100
+   document.write("¿El numero es mayor que 1 y menor que 100? " + mayor1menor100)
+
+   /** Ingresando una nota y un numero asistencias, determinar si
+    * un estudiante aprueba, teniendo en cuenta que se aprueba con
+    * una nota superior o igual a 3 Y minimo 60 asistenas
+   */
+
+   var nota = parseFloat(prompt("Ingrese la nota:"))
+   var asistencias = parseInt(prompt("Ingrese las asistencias"))
+   var aprueba = nota >= 3 && asistencias >= 60
+   document.write("¿El estudiante aprobó? " + aprueba)
+
+    /**
+     * Ingresando una estacion, determinar si es tiempo de sembrar,
+     * teniendo en cuenta que solo se puede sembrar en verano U otoño
+    */
+
+    var estacion = prompt("Ingrese la estacion")
+    var tiempoDeSembrar = estacion == "Verano" || estacion == "Otoño"
+    document.write("¿Es tiempo de sembrar? " + tiempoDeSembrar)
+
+   /**
+    * Ingresando un animal, determinar si es domestico, 
+    * teniendo en cuenta que solo los gatos, perros O pajaros
+    * son domesticos
+   */
+
+  var animal = prompt("Ingrese el animal")
+  var esDomestico = animal == "Gato" || animal == "Perro" || animal == "Pajaro"
+  document.write("¿Es domestico? " + esDomestico)
+</script>
+</html>
