@@ -9,7 +9,7 @@
     
 </body>
 <script>
-    // var nota = parseFloat(prompt("Ingrese la nota:"))
+    // var nota = parseFloat(prompt("Ingrese la nota:")) //3.5
     // if(nota >= 3){
     //     document.write("Aprobado")
     // } else {
@@ -36,10 +36,10 @@
      * */
     // var estacion = prompt("Ingrese la estacion del año")
     // var mensaje = ""
-    // if(estacion == "Verano" || estacion == "Otoño"){
-    //     mensaje = "Es buen tiempo para sembrar"
+    // if(estacion == "Verano" || estacion == "Otoño"){ // Si 
+    //     mensaje = "Es buen tiempo para sembrar" // Entonces
     // }else{
-    //     mensaje = "No es tiempo de sembrar"
+    //     mensaje = "No es tiempo de sembrar" // Sino
     // }
     // document.write(mensaje)
 
@@ -93,25 +93,57 @@
 
   /** Switch */
   /* Dado el numero de un mes devolver su nombre */
-  var numeroMes = parseInt(prompt("Ingrese el numero del mes:"))
-  var nombreMes = ""
-  if(numeroMes > 0 && numeroMes <= 12){
-    switch(numeroMes){
-        case 1:
-            nombreMes = "Enero"
-            break;
-        case 2:
-            nombreMes = "Febrero"
-            break;
-        case 3:
-            nombreMes = "Marzo"
-            break;
-    }
+//   var numeroMes = parseInt(prompt("Ingrese el numero del mes:"))
+//   var nombreMes = ""
+//   if(numeroMes > 0 && numeroMes <= 12){
+//     switch(numeroMes){
+//         case 1:
+//             nombreMes = "Enero"
+//             break;
+//         case 2:
+//             nombreMes = "Febrero"
+//             break;
+//         case 3:
+//             nombreMes = "Marzo"
+//             break;
+//     }
 
-    document.write("El mes ingresado es: " + nombreMes)
-}else{
-    document.write("El mes ingresado no es valido")
+//     document.write("El mes ingresado es: " + nombreMes)
+// }else{
+//     document.write("El mes ingresado no es valido")
+// }
+
+/**
+ * 
+ * Ejercicio 7: Determinar la estación del año según el mes [Swtich]
+Escribe un programa que solicite un número de mes (1-12) y determine la estación del año (primavera, verano, otoño, invierno).
+*/
+var mes = parseInt(prompt("Ingrese el mes:"))
+
+switch(mes){
+    case 2:
+    case 3:
+    case 4:
+        document.write("Es primavera")
+        break;
+    case 5:
+    case 6:
+    case 7:
+        document.write("Es verano")
+        break;
+    case 8: 
+    case 9:
+    case 10:
+        document.write("Es Otoño")
+        break;
+    case 11:
+    case 12:
+    case 1:
+        document.write("Es invierno")
+        break;
 }
+
+
 
 
 </script>
