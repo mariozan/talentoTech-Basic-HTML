@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /** Imprimir los numeros del 1 al 10 */
+    //   Inicio;    Salida;    Incremento
+    // for(var num = 0; num<=10; num+=2){
+    //     document.write("El numero es: " + num + "<br>")
+    // }
+    // /** Cronometro */
+    // for(var i=10; i>0; i--){
+    //     document.write("Tick Tack " + i + "<br>")
+    // }
+    // document.write("Boom")
+
+    /**
+     * Hacer un algoritmo que calcule el factorial de un numero
+    */
+//    var num = parseInt(prompt("Ingrese el numero: ")) // 5
+//    var factorial=1;
+//    for(var i=num; i>0; i--){
+//     //                factorial*i
+//     factorial= factorial*i // 1*5 => 5*4 => 20*3 => 60*2 => 120*1 = 120
+//    }
+//    document.write("El factorial de " + num + " es " + factorial)
+
+   /**
+    * Implementar un algoritmo que reciba un numero, e imprima la tabla
+    * de mutiplicar de dicho numero hasta 10, con el siguiente formato:
+    * n*1 = ?
+    * n*2 = ?
+   */
+//   var num = parseInt(prompt("Ingrese el numero"))
+//   var multiplicacion
+//   for(var i=1; i<=10; i++){
+//     multiplicacion=i*num
+//     document.write(num + "*" + i + "=" +multiplicacion + "<br>")
+//   }
+
+  /**
+   * Implementar un algoritmo que reciba un numero
+   * e imprima de sus numeros anteriores mayores que 0
+   * cuales son pares, cuales impares y cuales son multiplos de 3
+  */
+
+//   var num = parseInt(prompt("Ingrese el numero:"))
+//   var texto = ""
+//   for(var i=num; i>0; i--){
+//     if(i%2 == 0){
+//         texto = i + " Es par <br>"
+//     }else{
+//         texto = i + " Es Impar <br>"
+//     }
+    
+//     if(i%3 == 0){
+//         texto = texto + i + " Es multiplo de 3 <br>"
+//     }
+//     document.write(texto)
+//   }
+
+  /**
+   * Implementar un algoritmo que determine si un numero ingresado es primo
+  */
+    // 1 - num
+//   var num = parseInt(prompt("Ingrese el numero"))
+//   var divisores=0 // 7
+//   for(var i=1; i<=num; i++){
+//     if(num%i === 0){ //7%7
+//         divisores++ // 2
+//     }
+//   }
+
+//   if(divisores>2){
+//       document.write("EL numero NO es primo")
+//     }else{
+//       document.write("El numero es primo")
+//   }
+
+
+  /**
+   * Implementar un algoritmo que me reciba un numero e imprima una 
+   * escalera de *, como la siguiente, de acuerdo al numero ingresado:
+   * +
+   * ++
+   * +++
+   * ++++
+   * +++++
+  */
+
+//   var num = parseInt(prompt("Ingrese el numero"))
+//   var escalera = "" 
+//   for(var i=1; i<=num; i++){
+//     // escalera = escalera+"*"
+//     escalera += "*" //*****
+//     document.write(escalera +"<br>")
+//   }
+
+  /**
+   * Implementar un algoritmo que reciba un numero de mes
+   * y muestre todos los meses anteriores, incluyendolo
+  */
+ var numeroMes = parseInt(prompt("Ingrese el numero del mes"))
+
+ for(var i=1; i<=numeroMes; i++){
+    switch(i){
+        case 1:
+            document.write("Enero <br>")
+            break;
+        case 2:
+            document.write("Febrero <br>")
+            break;
+        case 3:
+            document.write("Marzo <br>")
+            break;
+        case 4:
+            document.write("Abril <br>")
+            break;
+        case 5:
+            document.write("Mayo <br>")
+            break;
+        case 6:
+            document.write("Junio <br>")
+            break;
+        case 7:
+            document.write("Julio <br>")
+            break;
+    }
+}
+
+  /**
+   * Implementar un algoritmo que cuente cuantos numeros multiplos de 7 hay entre
+   * 1 y 100
+  */
+
+
+</script>
+</html>

@@ -98,17 +98,17 @@
         Después pregunta si quiere añadir otro número: si la respuesta es afirmativa añádelo al total; 
         en caso contrario finaliza el ciclo y muestra el resultado total en pantalla.
     */
-   var num1 = parseInt(prompt("Ingrese el num1"))
-   var num2 = parseInt(prompt("Ingrese el numero 2"))
-   var total = num1+num2
-   var preguntaPorNuevoNumero = prompt("Quiere ingresar otro numero")
+//    var num1 = parseInt(prompt("Ingrese el num1"))
+//    var num2 = parseInt(prompt("Ingrese el numero 2"))
+//    var total = num1+num2
+//    var preguntaPorNuevoNumero = prompt("Quiere ingresar otro numero")
 
-   while(preguntaPorNuevoNumero == "Si"){
-    var numero = parseFloat(prompt("Ingrese el nuevo numero"))
-    total = total+numero
-    preguntaPorNuevoNumero = prompt("Quiere ingresar otro numero")
-   }
-   document.write("El total es: "+ total)
+//    while(preguntaPorNuevoNumero == "Si"){
+//     var numero = parseFloat(prompt("Ingrese el nuevo numero"))
+//     total = total+numero
+//     preguntaPorNuevoNumero = prompt("Quiere ingresar otro numero")
+//    }
+//    document.write("El total es: "+ total)
 
 
     /**
@@ -120,6 +120,18 @@
         si la respuesta es afirmativa entonces pregunta por una persona más; 
         en caso contrario cierra el ciclo y muestra en pantalla cuantos invitados son.
     */
+//    var nombre = prompt("Ingrese el nombre de tu amigo: ")
+//    var contador = 1
+//    var preguntarPorOtroAmigo = prompt("¿Preguntar por otro amigo? ")
+
+//    while(preguntarPorOtroAmigo == "Si"){
+//     nombre = prompt("Ingrese el nombre de tu amigo: ")
+//     contador++
+//     preguntarPorOtroAmigo = prompt("¿Preguntar por otro amigo? ")
+//    }
+
+//    document.write("La cantidad de amigos invitados es: ", contador)
+
 
     /**
      * Reto #5 - “Un elefante se balanceaba…”
@@ -131,6 +143,45 @@
         Tomar en cuenta cuando el texto muestra un solo elefante y varios elefantes.
     */
 
+    // var texto = " se balanceaba sobre la tela de una araña, como veia que resistia llamaron otro elefante"
+    // var elefantes = parseInt(prompt("Ingrese los elefantes"))
+    // var contador = 1
+    // var textoElefante = "Elefante"
+    // while(contador <= 10){
+    //     if(contador != 1){
+    //         textoElefante = "Elefantes"
+    //     }
+    //     document.write(contador + " " + textoElefante + " " + texto + "<br>")
+    //     contador++
+    // }
+
+    /**
+     * Implementar un algoritmo que haga una cuenta regresiva y cuando llegue a cero imprima BOOM
+    */
+
+    // var cronometro = 10
+    // while(cronometro > 0){
+    //     document.write("Tick Tock " + cronometro + "<br>") 
+    //     cronometro--
+    // }
+
+    // document.write("BOOM!")
+
+    /**
+     * Implementar una cuenta regresiva para el despegue de una nave,
+     * comenzando en 15 e imprimir: "Despegue en" y el numero de la cuenta
+     * cuando la cuenta llegue a 0, imprimir "Buen Viaje"
+     * cuando la cuenta vaya en 10 imprimir, "Encendiendo Motores"
+    */
+   var cronometro = 15 // Inicio
+   while(cronometro > 0){ // Condicion de salida
+    document.write("Despegue en: " + cronometro + "<br>")
+    if(cronometro == 10){
+        document.write("Encendiendo motores <br>")
+    }
+    cronometro-- // Incremento o Decremento
+   }
+   document.write("Buen viaje")
 
 
 </script>
