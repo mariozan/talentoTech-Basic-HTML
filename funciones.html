@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Definiendo la funcion
+    // parametro
+    function saludar(nombre, apellido){
+        document.write("Hola" + " " + nombre + " " + apellido + "<br>")
+    }
+
+    function despedirse(){
+        document.write("Adios <br>")
+    }
+
+    /**
+     * Implementar una calculadora usando funciones
+    */
+
+    // Definicion de la funcion
+   function suma(num1, num2){
+    return num1+num2
+   }
+
+   function resta(num1, num2){
+    return num1-num2
+   }
+
+   function multiplicacion(num1, num2){
+    return num1*num2
+   }
+
+   function division(num1, num2){
+    return num1/num2
+   }
+
+   // LLamado de la funcion
+//    var n1 = parseInt(prompt("Ingrese el numero 1:"))
+//    var n2 = parseInt(prompt("Ingrese el numero 2:"))
+//    var operacion = prompt("Ingrese la operacion")
+//    var resultado = 0
+
+//    switch(operacion){
+//     case "Suma":
+//         resultado = suma(n1, n2)
+//         break;
+//     case "Resta":
+//         resultado = resta(n1, n2)
+//         break;
+//     case "Multiplicacion":
+//         resultado = multiplicacion(n1, n2)
+//         break;
+//     case "Division":
+//         resultado = division(n1, n2)
+//         break;
+//    }
+
+//    document.write("El resultado de la " + operacion + " es: " + resultado)
+
+   /**
+    * Crear una funcion que reciba un numero y me diga
+    * a cual mes pertenece
+   */
+
+  function validarMes(numero){
+    var mes=""
+    switch(numero){
+        case 1:
+            mes = "Enero"
+            break;
+        case 2:
+            mes = "Febrero"
+            break;
+        case 3:
+            mes = "Marzo"
+            break;
+        case 4:
+            mes = "Abril"
+            break;
+        case 5:
+            mes = "Mayo"
+            break;
+        case 6:
+            mes = "Junio"
+            break;
+        case 7:
+            mes = "Julio"
+            break;
+    }
+    return mes
+  }
+
+  // Llamado
+//   document.write(validarMes(1))
+//   document.write(validarMes(3))
+//   document.write(validarMes(7))
+
+  /**
+   * Crear una funcion que reciba 4 numeros y retorne el promedio
+  */
+function promedio(num1, num2, num3, num4){ //4,12,6,8
+    return (num1+num2+num3+num4)/4 // 7.5
+}
+
+var resultado = promedio(4,12,6,8) // 7.5
+document.write("El promedio es: " + resultado)
+
+ /**
+  * Crear una funcion que reciba un numero y retorne su factorial
+ */
+function factorial(num){ // 7
+    var calculo=1;
+    for(var i=num; i>0; i--){
+        calculo= calculo*i // 1*7 = 7*6 = 42*5 = 210*4 = 840*3 = 2520*2 = 5040*1
+    }
+    return calculo
+}
+
+var calculoFactorial = factorial(7)
+document.write("El factorial es: " + calculoFactorial)
+
+/**
+ * Crear una funcion que reciba una edad y retorne si es apto para votar
+*/
+function aptoVotar(edad){
+    if(edad >= 18){
+        return "Si"
+    }else{
+        return "No"
+    }
+}
+
+var validarEdad = aptoVotar(16)
+document.write("Es apto para votar? " + validarEdad)
+
+/**
+ * Crear una funcion que reciba un array de numeros y retorne el numero mas alto
+*/
+function numeroMayor(array){ //100,75,40,5,86,212
+    var mayor=array[0] // 100
+    for(var i=0; i<= array.length; i++){
+        if(array[i] > mayor){ // 212 > 100
+            mayor = array[i] // 212
+        }
+    }
+    return mayor // 212
+}
+
+var numeros = [100,75,40,5,86,212]
+document.write("EL numero mayor es: " + numeroMayor(numeros))
+
+/**
+ * Crear una funcion que reciba un array de numeros y retorne el numero mas bajo
+*/
+
+/**
+ * Crear una funcion que reciba un array y retorne su segundo elemento
+*/
+</script>
+</html>

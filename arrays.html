@@ -10,7 +10,7 @@
 </body>
 <script>
     //                  0         1         2
-    // var estudiantes = ["Juan", "Maria", "Carolina"]
+    // var estudiantes = ["Juan", "Maria", "Carolina", "Andres"]
     // var notas = [3.5, 4.2, 2.8]
     // var frutas = ["Manzana", "Pera", "Banano"]
     // document.write(estudiantes[2])
@@ -24,7 +24,7 @@
 //    var clientes = ["Luis", "Roberto", "Zenon", "Camila"]
 //    clientes.push("Marcela") // Añado un elemento al final
 //    document.write(clientes + "<br>")
-// //    document.write("<br>")
+//    document.write("<br>")
 //    /**
 //     * Eliminar un elemento del array
 //    */
@@ -32,11 +32,11 @@
 //   // (indice, cantidad)
 //   clientes.splice(0, 1) //Elimino un elemento en una posicion especifica
 //   document.write(clientes + "<br>")
-// //   document.write("<br>")
+//   document.write("<br>")
 
-//   /**
-//    * Ordenar un array
-//   */
+// //   /**
+// //    * Ordenar un array
+// //   */
 
 //   clientes.sort() // Ordena
 //   clientes.reverse() // Ordena al reves
@@ -111,37 +111,37 @@
 /**
  * Algortimo que imprima los elementos de un array, cada uno en una linea independiente
 */
-var equipos = ["Millonarios", "Santa fé", "Nacional", "America"]
-for(var i=0; i<equipos.length; i++){
-    document.write(equipos[i] + "<br>")
-}
+// var equipos = ["Millonarios", "Santa fé", "Nacional", "America"]
+// for(var i=0; i<equipos.length; i++){
+//     document.write(equipos[i] + "<br>")
+// }
 
-/**
- * Sumar todos los elementos de un array
-*/
-var ventas = [115, 224, 1500, 800, 3241]
-var total=0
-for(var i=0; i<ventas.length; i++){
-    total+=ventas[i]
-}
-document.write("El total de ventas fue: " + total)
+// /**
+//  * Sumar todos los elementos de un array
+// */
+// var ventas = [115, 224, 1500, 800, 3241]
+// var total=0
+// for(var i=0; i<ventas.length; i++){
+//     total+=ventas[i]
+// }
+// document.write("El total de ventas fue: " + total)
 
-/**
- * Encontrar el valor maximo de un array
-*/
-var notas = [3.1, 3.3 , 4, 1.2]
-var notaMaxima=notas[0] // 3.1
-for(var i=0; i<notas.length; i++){
-    if(notas[i] > notaMaxima){ // 1.2 > 4
-        notaMaxima = notas[i] // 4
-    }
-}
+// /**
+//  * Encontrar el valor maximo de un array
+// */
+// var notas = [3.1, 3.3 , 4, 1.2]
+// var notaMaxima=notas[0] // 3.1
+// for(var i=0; i<notas.length; i++){
+//     if(notas[i] > notaMaxima){ // 1.2 > 4
+//         notaMaxima = notas[i] // 4
+//     }
+// }
 
-document.write("La nota maxima es: " + notaMaxima + "<br>")
+// document.write("La nota maxima es: " + notaMaxima + "<br>")
 
-/**
- * Teniendo un array de numeros, imprimir solamente los que sean mutiplos de 4
-*/
+// /**
+//  * Teniendo un array de numeros, imprimir solamente los que sean mutiplos de 4
+// */
 var numeros = [2, 3, 16, 24, 36, 48, 62, 80, 100]
 for(var i=0; i<numeros.length; i++){
     if(numeros[i]%4 == 0){ // Operador modulo => Residuo
