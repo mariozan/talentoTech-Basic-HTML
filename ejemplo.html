@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body id="body">
+    <div class="selector-tema">
+        <select name="" id="tema" onchange="cambiarTema()">
+            <option value="light">Claro</option>
+            <option value="dark">Oscuro</option>
+            <option value="crazy">Loco</option>
+        </select>
+    </div>
     <div>
         <img src="https://www.valoraanalitik.com/wp-content/uploads/2019/11/MIN-TIC.png" alt="Logo MINTIC" width="600">
         <h1>MinTIC</h1>
@@ -52,4 +59,26 @@
         </tr>
     </table>
 </body>
+<script>
+    function cambiarTema(){
+        // Elemento que va cambiar
+        var body = document.getElementById("body")
+        // Valor del selector de temas
+        var tema = document.getElementById("tema").value
+        var fondo = ""
+        var letra = ""
+        if(tema == "light"){
+            fondo = "white"
+            letra = "black"
+        } else if(tema == "dark"){
+            fondo = "black"
+            letra = "white"
+        } else if(tema == "crazy"){
+            fondo = "tomato"
+            letra = "yellow"
+        }
+        body.style.backgroundColor = fondo
+        body.style.color = letra
+    }
+</script>
 </html>

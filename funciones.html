@@ -19,6 +19,14 @@
         document.write("Adios <br>")
     }
 
+    // Llamado de la funcion
+    // saludar("Juan", "Perez")
+    // saludar("Andrea", "Serna")
+    // saludar("Radamel", "Falcao")
+    // saludar("Pibe", "Valderrama")
+    // saludar("Laura", "Cruz")
+    // despedirse()
+
     /**
      * Implementar una calculadora usando funciones
     */
@@ -43,10 +51,10 @@
    // LLamado de la funcion
 //    var n1 = parseInt(prompt("Ingrese el numero 1:"))
 //    var n2 = parseInt(prompt("Ingrese el numero 2:"))
-//    var operacion = prompt("Ingrese la operacion")
+//    var operacion = prompt("Ingrese la operacion") //Suma
 //    var resultado = 0
 
-//    switch(operacion){
+//    switch(operacion){ // Suma
 //     case "Suma":
 //         resultado = suma(n1, n2)
 //         break;
@@ -109,7 +117,7 @@ function promedio(num1, num2, num3, num4){ //4,12,6,8
 }
 
 var resultado = promedio(4,12,6,8) // 7.5
-document.write("El promedio es: " + resultado)
+// document.write("El promedio es: " + resultado)
 
  /**
   * Crear una funcion que reciba un numero y retorne su factorial
@@ -123,7 +131,7 @@ function factorial(num){ // 7
 }
 
 var calculoFactorial = factorial(7)
-document.write("El factorial es: " + calculoFactorial)
+// document.write("El factorial es: " + calculoFactorial)
 
 /**
  * Crear una funcion que reciba una edad y retorne si es apto para votar
@@ -137,7 +145,7 @@ function aptoVotar(edad){
 }
 
 var validarEdad = aptoVotar(16)
-document.write("Es apto para votar? " + validarEdad)
+// document.write("Es apto para votar? " + validarEdad)
 
 /**
  * Crear una funcion que reciba un array de numeros y retorne el numero mas alto
@@ -153,14 +161,36 @@ function numeroMayor(array){ //100,75,40,5,86,212
 }
 
 var numeros = [100,75,40,5,86,212]
-document.write("EL numero mayor es: " + numeroMayor(numeros))
+// document.write("EL numero mayor es: " + numeroMayor(numeros))
 
 /**
  * Crear una funcion que reciba un array de numeros y retorne el numero mas bajo
 */
 
+function numeroMenor(array){ //100,75,40,5,86,212
+    var menor = array[0] // Empezamos por el numero de la primer posicion
+    for(var i=0; i <= array.length; i++){
+        if(array[i] < menor){ // 212 < 5
+            menor = array[i] // 5
+        }
+    }
+    return menor
+}
+
+var numeros = [100,75,40,5,86,212]
+// document.write("EL numero menor es: " + numeroMenor(numeros))
+
+
 /**
  * Crear una funcion que reciba un array y retorne su segundo elemento
 */
+
+function elementoArray(lista){
+    return lista[1] // 0,1
+}
+
+var numeros = [100,75,40,5,86,212]
+document.write("EL segundo elemento es: " + elementoArray(numeros))
+
 </script>
 </html>
