@@ -45,7 +45,10 @@
     <h1>Formulario de contacto</h1>
     <form action="">
         <label for="">Nombre</label>
-        <input type="text" name="nombre"> <br>
+        <input type="text" name="nombre" id="nombre" required> <br>
+        <label for="">Apellidos</label>
+        <input type="text" id="apellidos">
+        <button onclick="enviarFormulario()">Enviar</button>
     </form>
     <h1>Ventas del año 2023</h1>
     <table>
@@ -77,8 +80,19 @@
             fondo = "tomato"
             letra = "yellow"
         }
+        // Modificamos el estilo de la pagina
         body.style.backgroundColor = fondo
         body.style.color = letra
+    }
+
+    function enviarFormulario(){
+        var nombre = document.getElementById("nombre").value
+        var apellidos = document.getElementById("apellidos").value
+        // Agregar los campos que faltan
+
+        if(nombre && apellidos){
+            alert("Los datos del formulario son: " + nombre + " " + apellidos)
+        }
     }
 </script>
 </html>
