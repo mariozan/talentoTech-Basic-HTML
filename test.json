@@ -1,0 +1,29 @@
+[
+   {
+    "nombre": "Leonel Andres",
+    "apellidos": "Messi",
+    "edad": 34,
+    "casado": false,
+    "mascotas": [
+        {
+            "nombre": "Firulais",
+            "tipo": "Perro"
+        },
+        {
+            "nombre": "Pepe",
+            "tipo": "Loro"
+        }
+    ]
+   },
+   {
+    "nombre": "Radamel",
+    "apellidos": "Falcao",
+    "edad": 36,
+    "mascotas": [
+        {
+            "nombre": "Pepito",
+            "tipo": "Gato"
+        }
+    ]
+   }  
+]

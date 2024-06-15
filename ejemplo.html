@@ -14,7 +14,12 @@
         </select>
     </div>
     <div>
-        <img src="https://www.valoraanalitik.com/wp-content/uploads/2019/11/MIN-TIC.png" alt="Logo MINTIC" width="600">
+        <img class="a" src="https://www.valoraanalitik.com/wp-content/uploads/2019/11/MIN-TIC.png" alt="Logo MINTIC"  id="logo">
+        <select onchange="cambiarTamanoLogo(value)">
+            <option value="small">Pequeño</option>
+            <option value="medium">Mediano</option>
+            <option value="large">Grande</option>
+        </select>
         <h1>MinTIC</h1>
         <p>Ministerio de Tecnologías de la Información y las Comunicaciones de Colombia. Entidad encargada del sector TIC en Colombia</p>
     </div>
@@ -62,6 +67,12 @@
         </tr>
     </table>
 </body>
+
+<style>
+    .a{
+        width: 300px;
+    }
+</style>
 <script>
     function cambiarTema(){
         // Elemento que va cambiar
@@ -93,6 +104,23 @@
         if(nombre && apellidos){
             alert("Los datos del formulario son: " + nombre + " " + apellidos)
         }
+    }
+
+    function cambiarTamanoLogo(tamano){
+        // Accedo a la informacion del logo
+        var logo = document.getElementById("logo")
+        var tamanoLogo = 0
+        // Valido el tamaño seleccionado
+        if(tamano == "small"){
+            tamanoLogo = 300
+        }else if(tamano == "medium"){
+            tamanoLogo = 600
+        }else if(tamano == "large"){
+            tamanoLogo = 900
+        }
+        // Actualizo el tamaño de la imagen del logo
+        logo.style.width = tamanoLogo + "px"
+
     }
 </script>
 </html>

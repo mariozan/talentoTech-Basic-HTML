@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Correo</th>
+            </tr>
+        </thead>
+        <tbody id="usuarios">
+
+        </tbody>
+    </table>
+</body>
+<script>
+    // Ejecutar una accion cuando carga la pagina
+    document.addEventListener('DOMContentLoaded', function() {
+        // Hace la solicitud al servicio web para traer la informacion
+        fetch('http://localhost:3000/usuario')
+        .then(response => response.json()) // Lo convierte a formato json
+        .then(data => { // Guarda la informacion en la variable data
+            // Accedemos a la etiqueta que va a mostrar los datos
+            const tableBody = document.getElementById('usuarios')
+            // Recorremos cada uno de los datos que trae el servicio web
+            data.forEach(user => {
+                // Creamos una etique <tr> usando js
+                const row = document.createElement('tr')
+                //Creamos una etiqueta <td> usando js
+                const nombre = document.createElement('td')
+                // Agregamos el valor a la etiqueta
+                nombre.textContent = user.nombre 
+                // Agregamos el <td> al <tr>
+                row.appendChild(nombre)
+
+                const apellidos = document.createElement('td')
+                apellidos.textContent = user.apellidos
+                row.appendChild(apellidos)
+
+                const correo = document.createElement('td')
+                correo.textContent = user.correo
+                row.appendChild(correo)
+                // Agregamos el <tr> a la tabla
+                tableBody.appendChild(row)
+            })
+        })
+    })
+</script>
+</html>
