@@ -12,6 +12,7 @@
                 <th>Nombre</th>
                 <th>Apellidos</th>
                 <th>Correo</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody id="usuarios">
@@ -46,10 +47,49 @@
                 const correo = document.createElement('td')
                 correo.textContent = user.correo
                 row.appendChild(correo)
+
+                const acciones = document.createElement('td')
+                const editar = document.createElement('a')
+                editar.textContent = 'Editar'
+
+                const eliminar = document.createElement('button') // Creamos la etiqueta button
+                eliminar.textContent = 'Eliminar' // Agregamos el texto al boton
+                eliminar.addEventListener('click', function(){ // Creamos un evento al dar click
+                    const textoConfirmacion = '¿Esta seguro que desea eliminar a ' + user.nombre +'?'
+                    if(confirm(textoConfirmacion)){ // Mostramos un mensaje de confirmacion
+                        eliminarUsuario(user._id, row) // Llamamos la funcion para eliminar
+                    }
+                })
+
+                acciones.appendChild(eliminar)                
+                acciones.appendChild(editar)
+                row.appendChild(acciones)
+
                 // Agregamos el <tr> a la tabla
                 tableBody.appendChild(row)
             })
         })
     })
+
+    // Funcion para eliminar un usuario, pasandole el id
+    function eliminarUsuario(id, row){
+        // Esta es la url de eliminacion, por ejemplo
+        // http://localhost:3000/usuario/6668ed6bff9c23e033128545
+        const deleteUrl = 'http://localhost:3000/usuario/'+id
+        // Ejecuto la accion del API
+        fetch(deleteUrl, {
+            method: 'DELETE' // Defino el metodo a utilizar
+        })
+        .then(response => {
+            // Obtengo la respuesta del servidor
+            if(response.status == 200){ // Validando que sea exitosa
+                row.remove() // Elimino al usuario de la lista
+                alert('Usuario eliminado correctamente') // Muestro un mensaje de confirmacion      
+            }else{
+                alert('Error eliminando al usuario') // Muestro mensaje de error
+            }
+        })
+        .catch(error => console.log('Error: ', error))
+    }
 </script>
 </html>
