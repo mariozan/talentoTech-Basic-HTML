@@ -51,6 +51,7 @@
                 const acciones = document.createElement('td')
                 const editar = document.createElement('a')
                 editar.textContent = 'Editar'
+                editar.href = './create.html?id='+user._id
 
                 const eliminar = document.createElement('button') // Creamos la etiqueta button
                 eliminar.textContent = 'Eliminar' // Agregamos el texto al boton
