@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="../assets/loadNavbar.js"></script>    
+    <div id="navbar"></div>
 </head>
 <body>
-    <table>
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>Nombre</th>
@@ -52,9 +54,12 @@
                 const editar = document.createElement('a')
                 editar.textContent = 'Editar'
                 editar.href = './create.html?id='+user._id
+                editar.classList.add('btn', 'btn-warning');
 
                 const eliminar = document.createElement('button') // Creamos la etiqueta button
                 eliminar.textContent = 'Eliminar' // Agregamos el texto al boton
+                eliminar.classList.add('btn', 'btn-danger');
+
                 eliminar.addEventListener('click', function(){ // Creamos un evento al dar click
                     const textoConfirmacion = '¿Esta seguro que desea eliminar a ' + user.nombre +'?'
                     if(confirm(textoConfirmacion)){ // Mostramos un mensaje de confirmacion
@@ -62,8 +67,8 @@
                     }
                 })
 
-                acciones.appendChild(eliminar)                
                 acciones.appendChild(editar)
+                acciones.appendChild(eliminar)                
                 row.appendChild(acciones)
 
                 // Agregamos el <tr> a la tabla

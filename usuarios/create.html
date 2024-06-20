@@ -4,23 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="../assets/loadNavbar.js"></script>    
+    <div id="navbar"></div>
 </head>
 <body>
-    <form id="guardarUsuario">
+    <form id="guardarUsuario" class="container">
         <label for="nombre">Nombre</label>
-        <input type="text" placeholder="Nombre" id="nombre" required>
+        <input type="text" placeholder="Nombre" id="nombre" required class="form-control">
         <label for="apellidos">Apellidos</label>
-        <input type="text" placeholder="Apellidos" id="apellidos" required>
+        <input type="text" placeholder="Apellidos" id="apellidos" required class="form-control">
         <label for="correo">Correo</label>
-        <input type="email" placeholder="Correo" id="correo" required>
+        <input type="email" placeholder="Correo" id="correo" required class="form-control">
         <label for="password">Contraseña</label>
-        <input type="password" placeholder="Contraseña" id="password" required>
-        <button type="submit">Enviar</button>
+        <input type="password" placeholder="Contraseña" id="password" required class="form-control">
+        <hr>
+        <button type="submit" class="btn btn-primary col-12">Enviar</button>
     </form>
 </body>
 <script>
     // Ejecuta una accion cuando carga la pagina
     document.addEventListener('DOMContentLoaded', function() {
+
+        const searchParams = new URLSearchParams(window.location.search)
+        const id = searchParams.get("id") // Asignamos el id a una variable
+
         // Acceder a la informacion de la etiqueta form
         const form = document.getElementById('guardarUsuario')
         // Ejecuto una accion cuando el formulario se envia
@@ -34,13 +41,15 @@
                 password: document.getElementById('password').value
             }
 
-            submitForm(data, "http://localhost:3000/usuario", "POST")
+            if(searchParams.has('id')){ // Si llega un id en la URL -> Actualizamos
+                submitForm(data, "http://localhost:3000/usuario/"+id, "PUT")
+            }else{
+                submitForm(data, "http://localhost:3000/usuario", "POST")
+            }
         })
 
         // Obtenemos el id de la url
-        const searchParams = new URLSearchParams(window.location.search)
-        if(searchParams.has('id')){
-            const id = searchParams.get("id") // Asignamos el id a una variable
+        if(searchParams.has('id')){ // verificamos si el parametro id viene en la url
             // Consulta la informacion del usuario que tiene ese id
             fetch('http://localhost:3000/usuario/'+id)
             .then(response => response.json()) // Lo convierte a formato json
@@ -55,8 +64,8 @@
 
     function submitForm(data, url, method){
 
-        fetch(url, {
-                method: method,
+        fetch(url, { // localhost:3000/usuario
+                method: method, // POST
                 headers: {
                     'Content-Type': 'application/json'
                 },
@@ -66,9 +75,9 @@
                 return response.json()                
             })
             .then(data => {
-                if(data.status == "success"){
+                if(data.status == "success"){ // Validamos la respuesta del servidor
                     alert('Usuario registrado correctamente')
-                    window.location.href = "./list.html";
+                    window.location.href = "./list.html"; // Redireccionamos a la lista
                 }else{
                     alert(data.message)
                 }
