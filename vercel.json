@@ -1,0 +1,32 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "index.html",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "/usuarios/list.html",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "/usuarios/create.html",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/",
+        "dest": "/index.html"
+      },
+      {
+        "src": "/usuarios",
+        "dest": "/usuarios/list.html"
+      },
+      {
+        "src": "/create",
+        "dest": "/usuarios/create.html"
+      }
+    ]
+  }
+  

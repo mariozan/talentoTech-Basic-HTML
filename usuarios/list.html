@@ -26,7 +26,7 @@
     // Ejecutar una accion cuando carga la pagina
     document.addEventListener('DOMContentLoaded', function() {
         // Hace la solicitud al servicio web para traer la informacion
-        fetch('http://localhost:3000/usuario')
+        fetch('https://nodejs-express-beta.vercel.app/usuario')
         .then(response => response.json()) // Lo convierte a formato json
         .then(data => { // Guarda la informacion en la variable data
             // Accedemos a la etiqueta que va a mostrar los datos
@@ -80,8 +80,8 @@
     // Funcion para eliminar un usuario, pasandole el id
     function eliminarUsuario(id, row){
         // Esta es la url de eliminacion, por ejemplo
-        // http://localhost:3000/usuario/6668ed6bff9c23e033128545
-        const deleteUrl = 'http://localhost:3000/usuario/'+id
+        // https://nodejs-express-beta.vercel.app/usuario/6668ed6bff9c23e033128545
+        const deleteUrl = 'https://nodejs-express-beta.vercel.app/usuario/'+id
         // Ejecuto la accion del API
         fetch(deleteUrl, {
             method: 'DELETE' // Defino el metodo a utilizar
